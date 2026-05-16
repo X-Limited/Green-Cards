@@ -1,8 +1,3 @@
-import os
-import re
-import pandas as pd
-import pdfplumber
-from PyPDF2 import PdfReader, PdfWriter
 
 # ============================================
 # GREEN CARDS PDF AUTOMATION
