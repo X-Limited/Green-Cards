@@ -28,9 +28,7 @@ spz_regex = r"\\b\\d[A-Z0-9]{1,2}\\d{4}\\b|\\b[A-Z]{2,3}\\d{4}\\b"
 reader = PdfReader(PDF_SOUBOR)
 
 with pdfplumber.open(PDF_SOUBOR) as pdf:
-
     for i in range(START_PAGE - 1, len(pdf.pages)):
-
         page = pdf.pages[i]
         text = page.extract_text()
 
@@ -48,14 +46,11 @@ with pdfplumber.open(PDF_SOUBOR) as pdf:
 
         uzivatel = mapa_uzivatelu.get(spz, "NEZNAMY")
 
-        uzivatel_safe = re.sub(r'[\\\\/*?:\"<>|]', "", uzivatel)
+        uzivatel_safe = re.sub(r"[\\\\/*?:\"<>|]", "", uzivatel)
 
         vystupni_soubor = f"{spz}_{uzivatel_safe}.pdf"
 
-        vystupni_cesta = os.path.join(
-            VYSTUPNI_SLOZKA,
-            vystupni_soubor
-        )
+        vystupni_cesta = os.path.join(VYSTUPNI_SLOZKA, vystupni_soubor)
 
         writer = PdfWriter()
         writer.add_page(reader.pages[i])

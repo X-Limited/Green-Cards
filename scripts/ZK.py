@@ -18,9 +18,9 @@ from PyPDF2 import PdfReader, PdfWriter
 # Repository archive version
 # ============================================
 
-PDF_SOUBOR = 'Balik_ZK_6667500705.pdf'
-EXCEL_SOUBOR = 'Sesit1.xlsx'
-VYSTUPNI_SLOZKA = 'vystup_zk'
+PDF_SOUBOR = "Balik_ZK_6667500705.pdf"
+EXCEL_SOUBOR = "Sesit1.xlsx"
+VYSTUPNI_SLOZKA = "vystup_zk"
 START_PAGE = 23
 
-print('Green Cards automation script archive version')
+print("Green Cards automation script archive version")
